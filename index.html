@@ -324,8 +324,7 @@
 
       
         
-          
-            <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="命令行概述"><a href="#命令行概述" class="headerlink" title="命令行概述"></a>命令行概述</h2><ul>
+          <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="命令行概述"><a href="#命令行概述" class="headerlink" title="命令行概述"></a>命令行概述</h2><ul>
 <li>dos （windows）</li>
 <li>shell （Linux）：bash csh ksh</li>
 </ul>
@@ -344,123 +343,14 @@
 <li>tab 自动补全，连按两次会将所有匹配内容显示出来</li>
 <li>> 和 &gt;&gt;重定向，如echo hello world! &gt; README.md，&gt;覆盖 &gt;&gt;追加</li>
 <li>| 管道符可以将多个命令连接使用，上一次（命令）的执行结果当成下一次（命令）的参数。</li>
-<li>grep 匹配内容，一般结合管道符使用</li>
-</ul>
-<h2 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h2><blockquote>
-<p>linux操作系统标配，相当于windows下的记事本。</p>
-</blockquote>
-<h3 id="vi编辑器的三种模式"><a href="#vi编辑器的三种模式" class="headerlink" title="vi编辑器的三种模式"></a>vi编辑器的三种模式</h3><blockquote>
-<p>vi编辑器提供了3种模式，分别是命令模式、插入模式、底行模式，每种模式下用户所能进行的操作是不一样的。</p>
-</blockquote>
-<ul>
-<li>3种模式的切换如下图所示：</li>
-</ul>
-<p><img src="img/git1.jpg" alt=""></p>
-<h3 id="vi常用操作"><a href="#vi常用操作" class="headerlink" title="vi常用操作"></a>vi常用操作</h3><ul>
-<li>a) 打开/创建文件， vi 文件路径</li>
-<li>b) 底行模式 :w保存，:w filenme另存为</li>
-<li>c) 底行模式 :q退出</li>
-<li>d) 底行模式 :wq保存并退出</li>
-<li>e) 底行模式 :e! 撤销更改，返回到上一次保存的状态</li>
-<li>f) 底行模式 :q! 不保存强制退出</li>
-<li>g) 底行模式 :set nu 设置行号</li>
-<li>h) 命令模式 ZZ（大写）保存并退出</li>
-<li>i) 命令模式 u辙销操作，可多次使用</li>
-<li>j) 命令模式 dd删除当前行</li>
-<li>k) 命令模式 yy复制当前行</li>
-<li>l) 命令模式 p 粘贴内容</li>
-<li>m) 命令模式 ctrl+f向前翻页</li>
-<li>n) 命令模式 ctrl+b向后翻页</li>
-<li>o) 命令模式 i进入编辑模式，当前光标处插入</li>
-<li>p) 命令模式 a进入编辑模式，当前光标后插入</li>
-<li>q) 命令模式 A进入编辑模式，光标移动到行尾</li>
-<li>r) 命令模式 o进入编辑模式，当前行下面插入新行</li>
-<li>s) 命令模式 O进入编辑模式，当前行上面插入新行</li>
-</ul>
-<h2 id="版本控制概述"><a href="#版本控制概述" class="headerlink" title="版本控制概述"></a>版本控制概述</h2><ul>
-<li>本地版本控制</li>
-<li>集中版本控制</li>
-<li>分布式版本控制</li>
-</ul>
-<h2 id="git环境安装"><a href="#git环境安装" class="headerlink" title="git环境安装"></a>git环境安装</h2><ul>
-<li>window安装<ul>
-<li><a href="http://git-scm.com/download/win" target="_blank" rel="external">下载地址</a>，下载后和普通软件安装方式一样</li>
-</ul>
-</li>
-<li>linux安装<ul>
-<li>CentOS发行版：sudo yum install git</li>
-<li>Ubuntu发行版：sudo apt-get install git</li>
-</ul>
-</li>
-<li>Mac安装<ul>
-<li>打开Terminal直接输入git命令，会自动提示，按提示引导安装即可</li>
-</ul>
-</li>
-</ul>
-<h2 id="git工作原理"><a href="#git工作原理" class="headerlink" title="git工作原理"></a>git工作原理</h2><h3 id="git的三个工作区域"><a href="#git的三个工作区域" class="headerlink" title="git的三个工作区域"></a>git的三个工作区域</h3><ul>
-<li>工作目录</li>
-<li>暂存区域</li>
-<li>本地仓库</li>
-</ul>
-<p><img src="img/area.jpg" alt=""></p>
-<h3 id="git管理文件的4中状态"><a href="#git管理文件的4中状态" class="headerlink" title="git管理文件的4中状态"></a>git管理文件的4中状态</h3><ul>
-<li>未追踪untraced</li>
-<li>已暂存staged</li>
-<li>已提交commited</li>
-<li>已修改modified</li>
-</ul>
-<h2 id="git工作流程-本地创建仓库"><a href="#git工作流程-本地创建仓库" class="headerlink" title="git工作流程-本地创建仓库"></a>git工作流程-本地创建仓库</h2><ol>
-<li>配置用户信息</li>
-<li>初始化仓库</li>
-<li>添加文件到暂存区</li>
-<li>提交文件</li>
-<li>查看文件状态</li>
-<li>查看提交历史</li>
-<li>撤销文件修改</li>
-<li>恢复版本</li>
-</ol>
-<h2 id="git分支操作"><a href="#git分支操作" class="headerlink" title="git分支操作"></a>git分支操作</h2><h3 id="分支概述"><a href="#分支概述" class="headerlink" title="分支概述"></a>分支概述</h3><h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><ol>
-<li>创建分支</li>
-<li>切换分支</li>
-<li>合并分支</li>
-<li>删除分支</li>
-</ol>
-<h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><ul>
-<li>配置用户信息<ul>
-<li>全局配置，软件安装目录C:\Program Files\Git\mingw64\etc\gitconfig</li>
-<li>用户配置，用户名目录C:\Users\www.gitconfig</li>
-<li>项目配置，项目目录</li>
-<li>git config –global user.name zhangsan</li>
-<li>git config –global user.email “zhangsan@163.com”</li>
-</ul>
-</li>
-<li>查看文件状态<ul>
-<li>git status</li>
-</ul>
-</li>
-<li>查看提交记录(按q键退出)<ul>
-<li>git log</li>
-</ul>
-</li>
-<li>工作区添加到暂存区<ul>
-<li>git add</li>
-</ul>
-</li>
-<li>暂存区覆盖工作区内容<ul>
-<li>git checkout</li>
-</ul>
-</li>
-<li>暂存区提交到本地仓库<ul>
-<li>git commit -m ‘bug fixed’</li>
-</ul>
-</li>
-<li>回滚特定版本<ul>
-<li>git reset –hard <commit></commit></li>
-</ul>
-</li>
-</ul>
-
-          
+<li>grep 匹配内容，一般结合管道符使用
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/07/22/git-md/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
